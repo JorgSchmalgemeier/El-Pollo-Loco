@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Pollo Loco</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="icon" href="img/3_enemies_chicken/chicken_normal/1_walk/1_w.png" />
+    <script src="js/models/drawable-object.class.js"></script>
+    <script src="js/models/movable-object.class.js"></script>
+    <script src="js/models/character.class.js"></script>
+    <script src="js/models/chicken.class.js"></script>
+    <script src="js/models/small-chicken.class.js"></script>
+    <script src="js/models/collectable-object.class.js"></script>
+    <script src="js/models/bottle.class.js"></script>
+    <script src="js/models/bottle-air.class.js"></script>
+    <script src="js/models/coin.class.js"></script>
+    <script src="js/models/world.class.js"></script>
+    <script src="js/models/cloud.class.js"></script>
+    <script src="js/models/status-bar-health.class.js"></script>
+    <script src="js/models/status-bar-bottles.class.js"></script>
+    <script src="js/models/status-bar-coins.class.js"></script>
+    <script src="js/models/status-bar-endboss.class.js"></script>
+    <script src="js/models/background-object.class.js"></script>
+    <script src="js/models/keyboard.class.js"></script>
+    <script src="js/models/endboss.class.js"></script>
+    <script src="js/models/level.class.js"></script>
+    <script src="js/models/throwable-object.class.js"></script>
+    <script src="js/levels/level1.js"></script>
+    <script src="js/game.js"></script>
+</head>
+
+<body onload="init()">
+    <div class="main-container" id="main-container">
+        <h1>El Pollo Loco</h1>
+
+        <div class="key-description">
+            <div class="key">
+                <img src="img/11_icons/left.png">
+                <span class="key-text">WALK LEFT</span>
+            </div>
+            <div class="key">
+                <img src="img/11_icons/right.png">
+                <span class="key-text">WALK RIGHT</span>
+            </div>
+            <div class="key">
+                <img src="img/11_icons/space.png">
+                <span class="key-text">JUMP</span>
+            </div>
+            <div class="key" style="margin-top: 1px;">
+                <span class="D">D</span>
+                <span class="key-text">THROW BOTTLE</span>
+            </div>
+        </div>
+
+        <div class="container-canvas" id="container-canvas">
+
+            <canvas id="canvas" width="720" height="480"></canvas>
+
+            <img class="start-screen" id="start-screen" src="img/9_intro_outro_screens/start/startscreen_1.png">
+            <img class="game-over-screen" id="game-over-screen" src="img/9_intro_outro_screens/game_over/oh no you lost!.png">
+            <img class="game-over-screen" id="win-screen" src="img/9_intro_outro_screens/game_over/game over!.png">
+
+            <button onclick="startGame()" id="btn-start-game" class="btn-start-game">START GAME</button>
+
+            <button onclick="soundOff()" class="btn-sound-on" id="btn-sound-on">
+                <img src="img/11_icons/sound_on.png">
+            </button>
+
+            <button onclick="soundOn()" class="btn-sound-off" id="btn-sound-off">
+                <img src="img/11_icons/sound_off.png">
+            </button>
+
+            <button onclick="enterFullscreen()" class="btn-full-screen" id="btn-full-screen">
+                <img src="img/11_icons/fullscreen1.png">
+            </button>
+
+            <button onclick="closeFullscreen()" class="btn-close-full-screen" id="btn-close-full-screen">
+                <img src="img/11_icons/close_fullscreen1.png">
+            </button>
+
+            <div class="panel" id="panel">
+                <div class="panel-group">
+                    <div>
+                        <button class="btn-walk-left" id="btn-walk-left">
+                            <img src="img/11_icons/walk_left.png">
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn-walk-right" id="btn-walk-right">
+                            <img src="img/11_icons/walk_right.png">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="panel-group">
+                    <div>
+                        <button class="btn-jump" id="btn-jump">
+                            <img src="img/11_icons/up.png">
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn-throw" id="btn-throw">
+                            <img src="img/11_icons/bottle.png">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="overlay-grey" class="overlay-grey"></div>
+        </div>
+    </div>
+
+    <div class="rotate-device" id="rotate-device">
+        <img src="img/9_intro_outro_screens/start/startscreen_1.png">
+        <span>PLEASE ROTATE YOUR DEVICE TO PLAY</span>
+    </div>
+</body>
+
+</html>

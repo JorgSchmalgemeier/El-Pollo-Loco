@@ -1,0 +1,35 @@
+Für mögliche Erweiterung des Spiels, diese beiden Funtionen in der class drawable-object wieder hinzufügen
+--> wird benötigt für die collisions
+--> die Funktionen müssen aufgerufen werden in der wolrd.class addToMap() eingefügt werden 
+--->  //mo.drawFrame(this.ctx);               >>>>>>>>>if someone wants to expand the game, this function is usefull<<<<<<<<<<<
+        //mo.drawFrameOffset(this.ctx);         >>>>>>>>>if someone wants to expand the game, this function is usefull<<<<<<<<<<<
+---> Zeile 609 einfügen
+
+ /**
+     * This function draw a frame for each object. This is necessary and helpful to make the functions for the collisions.
+     * >>>>>>>>>if someone wants to expand the game, this function is usefull<<<<<<<<<<<
+     */
+    /*drawFrame(ctx) {
+        if (this instanceof Character || this instanceof Chicken || this instanceof SmallChicken || this instanceof Endboss) {
+            ctx.beginPath();
+            ctx.lineWidth = '5';
+            ctx.strokeStyle = 'blue';
+            ctx.rect(this.x, this.y, this.width, this.height);
+            ctx.stroke();
+        }
+    }
+
+
+    /**
+     * This function draw a frame for each object. This is necessary and helpful to make the functions for the collisions.
+     * >>>>>>>>>if someone wants to expand the game, this function is usefull<<<<<<<<<<<
+     */
+    /*drawFrameOffset(ctx) {
+        if (this instanceof Character || this instanceof Chicken || this instanceof SmallChicken || this instanceof ThrowableObject || this instanceof Bottle || this instanceof BottleAir || this instanceof Endboss) {
+            ctx.beginPath();
+            ctx.lineWidth = '5';
+            ctx.strokeStyle = 'red';
+            ctx.rect(this.x + this.offset.left, this.y + this.offset.top, this.width - this.offset.left - this.offset.right, this.height - this.offset.top - this.offset.bottom);
+            ctx.stroke();
+        }
+    }*/
