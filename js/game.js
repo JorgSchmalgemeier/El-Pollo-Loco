@@ -42,7 +42,6 @@ function closeStartScreen() {
     setTimeout(() => {
         document.getElementById('start-screen').classList.add('d-none');
         document.getElementById('btn-start-game').classList.add('d-none');
-        document.getElementById('container-canvas').classList.add('justify-content-start');
         if (!soundMute) {
             soundOn();
         }
