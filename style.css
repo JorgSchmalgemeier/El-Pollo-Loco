@@ -1,5 +1,7 @@
 body {
     min-height: 100vh;
+    max-height: 100vh;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,6 +9,7 @@ body {
     background-image: url('img/10_site_background/desert-example3.png');
     background-repeat: no-repeat;
     background-position: 46% 30%;
+    background-size: cover;
     margin: 0;
     font-family: 'zabras', Arial, Helvetica, sans-serif;
 }
@@ -323,10 +326,30 @@ h1 {
     src: url('fonts/zabars.ttf') format('truetype');
 }
 
+.legal-notice {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    font-size: 15px;
+    color: lightgrey;
+    font-family: 'Bree Serif';
+}
+
+.legal-notice:hover {
+    cursor: pointer;
+    color: rgb(231, 226, 226);
+}
+
 
 /****Smartphones*****/
 
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 1600px) {
+    .legal-notice {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
     canvas {
         width: 100%;
     }
@@ -339,9 +362,7 @@ h1 {
     h1 {
         margin-top: 0;
     }
-    .key-description {
-        display: none;
-    }
+    
     .btn-sound-on {
         top: 5px;
         bottom: auto;
@@ -364,6 +385,12 @@ h1 {
     }
     .panel {
         display: flex;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .key-description {
+        display: none;
     }
 }
 
